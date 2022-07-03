@@ -4,6 +4,6 @@ package com.ayd.moviebook.Model
 import com.google.gson.annotations.SerializedName
 
 data class MovieList(
-    @SerializedName("Search")
+    @SerializedName("items")
     val mList: List<Movie>
 )

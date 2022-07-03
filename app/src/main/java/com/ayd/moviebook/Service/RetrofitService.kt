@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 interface RetrofitService {
-    @GET("api?s=batman")
+    @GET("en/API/Top250Movies/k_5df0t83c")
     fun getAllMovies(): Call<MovieList>
 
     companion object{
@@ -19,7 +19,7 @@ interface RetrofitService {
 
             if (retrofitService == null) {
                 val retrofit = Retrofit.Builder()
-                    .baseUrl("https://fake-movie-database-api.herokuapp.com/")
+                    .baseUrl("https://imdb-api.com/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build()
                 retrofitService = retrofit.create(RetrofitService::class.java)

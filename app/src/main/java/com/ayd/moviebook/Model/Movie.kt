@@ -4,12 +4,12 @@ package com.ayd.moviebook.Model
 import com.google.gson.annotations.SerializedName
 
 data class Movie(
-    @SerializedName("imdbID")
+    @SerializedName("id")
     val imdbID: String,
-    @SerializedName("Poster")
+    @SerializedName("image")
     val poster: String,
-    @SerializedName("Title")
+    @SerializedName("title")
     val title: String,
-    @SerializedName("Year")
+    @SerializedName("year")
     val year: String
 )
