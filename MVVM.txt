@@ -1,0 +1,44 @@
+model(repository) view ViewModel'dan oluşur.
+
+1.) gradle'a ve manifest'e gerekli izinler verildikten sonra önce model 
+sınıfı oluşturulur. Plugin ya da elle oluşturabilirsin.
+2 tane model class'ı(data class) oluşturuluyor, bir tanesi liste döndüren, 
+bir tanesi de normal(datalara göre değişir bu).
+
+2-) retrofit ile işlemler yapacağımız service'i oluşturuyoruz. retrofit için
+oluşturulan bu RetrofitService sınıfı interface olmalı.
+
+3.) repository sınıfı oluşturuyoruz. bu sınıfta retrofitin performans vermesi
+sağlanıyor. Daha sonra viewModel'da ele alacağımız çağrı için sadece ağ 
+kaynağıyla etkileşime giriyor. Burada retrofit interface'ini çağırıyoruz.
+instance ediyoruz.
+
+4.) viewModel'ı hazırlıyoruz.
+ViewModel constructor'ında API çağrısından gelen respondu işlemek
+(handle etmek) için data repository'sine iletim yapmamız gerek.
+
+-Livedata(flow vs. sen bilirsin) UI verilerini update ediyor. observable 
+lifecyle ögelerinin update'i için livedata ya da türevleri kullanılıyor. 
+bunun için viewModel() kalıtımı alınmalı bu sınıfta.
+
+
+5.) ViewModelFactory.
+Birden fazla argümana sahip ViewModel için bir factory kurmak zorundayız.
+ViewModelProviders argümansız constructor içindir.
+
+
+6.) viewModel ve model halledildikten sonra view paketi açılır. Artık işimiz
+view yani UI kısmı.
+
+-UI kısmında ViewModel'in bir örneğini oluşturmamız ve API yanıtını 
+gözlemlememiz gerekiyor. API yanıtına göre kullanıcı arayüzünü güncellememiz 
+gerekiyor.
+
+
+xml(layout dosyaları ile uğraşılır. recyclerView vs. hazırlanır.).
+adapter sınıfı oluşturduk recylerView için(MainAdapter).
+
+Main activity'de bağlantılar sağlanıp işlem bitirilir.
+
+
+
