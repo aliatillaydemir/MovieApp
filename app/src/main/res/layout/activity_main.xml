@@ -15,6 +15,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="5"
-        tools:listitem="@layout/layout_rv_item" />
+        tools:listitem="@layout/layout_rv_item"
+        android:background="#0A0B0B"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

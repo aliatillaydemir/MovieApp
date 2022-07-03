@@ -1,10 +1,10 @@
 package com.ayd.moviebook.View
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ayd.moviebook.Model.Movie
-import com.ayd.moviebook.R
 import com.ayd.moviebook.databinding.LayoutRvItemBinding
 import com.bumptech.glide.Glide
 
@@ -29,6 +29,7 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
         holder.binding.movieTitle.text = movie.title
         Glide.with(holder.itemView.context).load(movie.poster)//.placeholder(R.drawable.placeholder)
             .into(holder.binding.moviePoster)
+        holder.binding.movieimdb.text = movie.rating
 
     }
 
@@ -38,6 +39,6 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
 }
 
-class MainViewHolder(val binding: LayoutRvItemBinding): RecyclerView.ViewHolder(binding.root) {
+class MainViewHolder(val binding: LayoutRvItemBinding): RecyclerView.ViewHolder(binding.root)  {
 
 }

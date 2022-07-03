@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.getAllMovies()
 
+
     }
 
 }

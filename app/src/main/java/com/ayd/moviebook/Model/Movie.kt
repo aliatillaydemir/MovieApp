@@ -11,5 +11,7 @@ data class Movie(
     @SerializedName("title")
     val title: String,
     @SerializedName("year")
-    val year: String
+    val year: String,
+    @SerializedName("imDbRating")
+    val rating: String,
 )
